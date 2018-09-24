@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MyTest
+namespace TestKata
 {
     [TestClass]
     public class UnitTest1
