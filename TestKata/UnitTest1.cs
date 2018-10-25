@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestKata
@@ -8,6 +9,13 @@ namespace TestKata
     [TestClass]
     public class UnitTest1
     {
+        //Linq sulution:
+        //
+        //public static int Number(List<int[]> peopleListInOut)
+        //{
+        //    return peopleListInOut.Sum(Item => Item[0] - Item[1]);
+        //}
+
         static public int counter = 0;
         static int[] busStop = new int[] { };
         private int Number(List<int[]> peopleListInOut)
