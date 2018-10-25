@@ -4,13 +4,23 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestKata
 {
-    
+
     [TestClass]
     public class UnitTest1
     {
-        private int Number(List<int[]> peopleList)
+        static public int counter = 0;
+        static int[] busStop = new int[] { };
+        private int Number(List<int[]> peopleListInOut)
         {
-            throw new NotImplementedException();
+            counter = 0;
+            for (int i = 0; i < peopleListInOut.Count; i++)
+            {
+                busStop = peopleListInOut[i];
+
+                counter = counter + busStop[0];
+                counter = counter - busStop[1];
+            }
+            return counter;
         }
 
         [TestMethod]
