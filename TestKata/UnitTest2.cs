@@ -29,9 +29,8 @@ namespace TestKata
             }
             else
             {
-                return diff * -1; // if "diff" is smaller than negative (below 0) it multiplys by -1 to change the number to positiive.
+                return diff * -1; // if "diff" is smaller than 0 ie: negative (below 0) it's multiplyed by -1 to change the number to positiive.
             }
-
         }
 
         [TestMethod]
