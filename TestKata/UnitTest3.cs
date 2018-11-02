@@ -2,7 +2,6 @@
 using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.ValueTuple;
 using System.Linq;
 
 namespace TestKata
@@ -24,58 +23,63 @@ namespace TestKata
     [TestClass]
     public class UnitTest3
     {
-        public static string HighAndLow(string Numbers)
+        // linq solution:
+        public static string HighAndLow(string numbers)
         {
-            string[] splittedLine = numbers.Split(' ');
-
-            double highest = 0;
-            double lowest = 0;
-
-            int amount = splittedLine.Length;
-
-            double[] converter = new double[amount];
-
-            for (int i = 0; i < splittedLine.Length; i++)
-            {
-
-                converter[i] = Convert.ToDouble(splittedLine[i]);
-            }
-
-
-
-            for (int i = 0; i < converter.Length; i++)
-            {
-                if (converter[i] > highest)
-                {
-                    highest = converter[i];
-
-                    if (converter[i] < lowest)
-                    {
-                        lowest = converter[i];
-                    }
-
-
-                }
-                if (converter[i] < lowest)
-                {
-                    lowest = converter[i];
-
-
-                    if (converter[i] > highest)
-                    {
-                        highest = converter[i];
-                    }
-                }
-            }
-
-            string result = highest.ToString() + " " + lowest.ToString();
-
-            return result;
-
-
-
+            var numbersList = numbers.Split(' ').Select(x => Convert.ToInt32(x));
+            return string.Format("{0} {1}", numbersList.Max(), numbersList.Min());
         }
-    }
+        ////public static string HighAndLow(string numbers)
+        ////{
+        ////    var parsed = numbers.Split().Select(int.Parse);
+        ////    return parsed.Max() + " " + parsed.Min();
+        ////}
+        //public static string HighAndLow(string numbers)
+        //{
+        //    string[] splittedLine = numbers.Split(' ');
+
+        //    double highest = 0;
+        //    double lowest = 0;
+
+        //    int amount = splittedLine.Length;
+
+        //    double[] converter = new double[amount];
+
+        //    highest = converter[0];
+        //    lowest = converter[0];
+
+        //    for (int i = 0; i < splittedLine.Length; i++)
+        //    {
+
+        //        converter[i] = Convert.ToDouble(splittedLine[i]);
+        //    }
+        //    for (int i = 0; i < converter.Length; i++)
+        //    {
+        //        if (converter[i] > highest)
+        //        {
+        //            highest = converter[i];
+
+        //            if (converter[i] < lowest)
+        //            {
+        //                lowest = converter[i];
+        //            }
+
+
+        //        }
+        //        if (converter[i] < lowest)
+        //        {
+        //            lowest = converter[i];
+
+
+        //            if (converter[i] > highest)
+        //            {
+        //                highest = converter[i];
+        //            }
+        //        }
+        //    }
+        //    string result = highest.ToString() + " " + lowest.ToString();
+        //    return result;
+        //}
 
         [TestMethod]
         public void TestMethod1()
