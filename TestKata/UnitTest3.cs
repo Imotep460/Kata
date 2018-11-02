@@ -26,29 +26,56 @@ namespace TestKata
     {
         public static string HighAndLow(string Numbers)
         {
-            string[] splittedLine = Numbers.Split(' ');
-         
+            string[] splittedLine = numbers.Split(' ');
+
             double highest = 0;
             double lowest = 0;
 
-            double converter = Convert.ToDouble(splittedLine);
+            int amount = splittedLine.Length;
 
-            for (int i = 0; i < splittedLine.Length(); i++)
+            double[] converter = new double[amount];
+
+            for (int i = 0; i < splittedLine.Length; i++)
             {
-                if (converter[i] < highest)
+
+                converter[i] = Convert.ToDouble(splittedLine[i]);
+            }
+
+
+
+            for (int i = 0; i < converter.Length; i++)
+            {
+                if (converter[i] > highest)
                 {
                     highest = converter[i];
+
+                    if (converter[i] < lowest)
+                    {
+                        lowest = converter[i];
+                    }
+
+
                 }
-                if (converter[i] > lowest)
+                if (converter[i] < lowest)
                 {
                     lowest = converter[i];
+
+
+                    if (converter[i] > highest)
+                    {
+                        highest = converter[i];
+                    }
                 }
             }
 
             string result = highest.ToString() + " " + lowest.ToString();
 
             return result;
+
+
+
         }
+    }
 
         [TestMethod]
         public void TestMethod1()
