@@ -7,6 +7,7 @@ using System.Linq;
 
 namespace TestKata
 {
+    //{
     ////In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 
     ////Example:
@@ -27,25 +28,38 @@ namespace TestKata
         {
             string[] splittedLine = Numbers.Split(' ');
 
-            int max = Int32.MinValue;
-            int min = Int32.MaxValue;
+            double highest = 0;
+            double lowest = 0;
 
-            foreach (var number in splittedLine)
+            double[] converter = Convert.ToDouble(splittedLine);
+
+            
+
+            for (int i = 0; i < splittedLine.Length(); i++)
             {
-                int currentNumber = int.Parse(number);
+                if (converter[i] < highest)
+                {
+                    highest = converter[i];
+                }
+                if(converter[i] > lowest)
+                {
+                    lowest = converter[i];
+                }
 
-                if (currentNumber > max)
-                    max = currentNumber;
-                if (currentNumber < min)
-                    min = currentNumber;
+
             }
-            return ToString();
+
+            string result = highest.ToString() + " " + lowest.ToString();
+
+            return result;
+
         }
+    }
 
         [TestMethod]
         public void TestMethod1()
         {
             Assert.AreEqual("42 -9", HighAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
         }
-    }
+    
 }
