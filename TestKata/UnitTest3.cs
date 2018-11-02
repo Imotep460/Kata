@@ -27,13 +27,11 @@ namespace TestKata
         public static string HighAndLow(string Numbers)
         {
             string[] splittedLine = Numbers.Split(' ');
-
+         
             double highest = 0;
             double lowest = 0;
 
-            double[] converter = Convert.ToDouble(splittedLine);
-
-            
+            double converter = Convert.ToDouble(splittedLine);
 
             for (int i = 0; i < splittedLine.Length(); i++)
             {
@@ -41,25 +39,21 @@ namespace TestKata
                 {
                     highest = converter[i];
                 }
-                if(converter[i] > lowest)
+                if (converter[i] > lowest)
                 {
                     lowest = converter[i];
                 }
-
-
             }
 
             string result = highest.ToString() + " " + lowest.ToString();
 
             return result;
-
         }
-    }
 
         [TestMethod]
         public void TestMethod1()
         {
             Assert.AreEqual("42 -9", HighAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
         }
-    
+    }
 }
