@@ -22,10 +22,10 @@ namespace TestKata
 {
 
     [TestClass]
-    public class UnitTest1
+    public class BusStatus
     {
-        //Linq sulution:
-        //
+        ////Linq sulution:
+
         //public static int Number(List<int[]> peopleListInOut)
         //{
         //    return peopleListInOut.Sum(Item => Item[0] - Item[1]);

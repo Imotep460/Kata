@@ -5,11 +5,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestKata
 {
-    /// <summary>
-    /// Summary description for UnitTest4
-    /// </summary>
     [TestClass]
-    public class UnitTest4
+    public class UniqueChars
     {
         ////Instructions:
 
@@ -60,10 +57,8 @@ namespace TestKata
         //            return false;
         //        }
         //    }
-
         //    return true;
         //}
-
 
         public static bool HasUniqueChars(string str)
         {

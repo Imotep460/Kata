@@ -49,11 +49,11 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Unittests\BusStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest2.cs" />
-    <Compile Include="UnitTest3.cs" />
-    <Compile Include="UnitTest4.cs" />
+    <Compile Include="Unittests\TwiceAsOld.cs" />
+    <Compile Include="Unittests\HighestAndLowest.cs" />
+    <Compile Include="Unittests\UniqueChars.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

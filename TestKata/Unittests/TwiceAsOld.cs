@@ -5,21 +5,19 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestKata
 {
-//<summary>
 //Your function takes two arguments:
 //current father's age (years)
 //current age of his son(years)
 //Сalculate how many years ago the father was twice as old as his son(or in how many years he will be twice as old).
-//</summary>
 
     [TestClass]
-    public class UnitTest2
+    public class TwiceAsOld
     {
-        //linq solution:
+        ////linq solution:
         //public static int TwiceAsOld(int dadYears, int sonYears) => Math.Abs(dadYears - (sonYears * 2));
 
         static int diff = 0;
-        int TwiceAsOld(int dadYears, int sonYears)
+        public static int twiceAsOld(int dadYears, int sonYears)
         {
             diff = 0;
             diff = ((sonYears * 2) - dadYears);
@@ -36,15 +34,14 @@ namespace TestKata
         [TestMethod]
         public void Test1()
         {
-            Assert.AreEqual(30, TwiceAsOld(30, 0));
-            Assert.AreEqual(16, TwiceAsOld(30, 7));
-            Assert.AreEqual(15, TwiceAsOld(45, 30));
+            Assert.AreEqual(30, twiceAsOld(30, 0));
+            Assert.AreEqual(16, twiceAsOld(30, 7));
+            Assert.AreEqual(15, twiceAsOld(45, 30));
         }
         [TestMethod]
         public void Test2()
         {
-            Assert.AreEqual(30, TwiceAsOld(30, 0));
+            Assert.AreEqual(30, twiceAsOld(30, 0));
         }
-    }
-        
+    }        
 }
