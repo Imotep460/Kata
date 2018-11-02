@@ -1,8 +1,8 @@
-﻿//using System;
-//using System.Text;
-//using System.Collections.Generic;
-//using Microsoft.VisualStudio.TestTools.UnitTesting;
-//using System.Linq;
+﻿using System;
+using System.Text;
+using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 //namespace TestKata
 //{
@@ -19,31 +19,31 @@
 ////There will always be at least one number in the input string.
 ////Output string must be two numbers separated by a single space, and highest number is first.
 
-//    [TestClass]
-//    public class UnitTest3
-//    {
-//        public static string HighAndLow(string Numbers)
-//        {
-//            string[] splittedLine = Numbers.Split(' ');
+[TestClass]
+public class UnitTest3
+{
+    public static string HighAndLow(string Numbers)
+    {
+        string[] splittedLine = Numbers.Split(' ');
 
-//            int max = Int32.MinValue;
-//            int min = Int32.MaxValue;
+        int max = Int32.MinValue;
+        int min = Int32.MaxValue;
 
-//            foreach (var number in splittedLine)
-//            {
-//                int currentNumber = int.Parse(number);
+        foreach (var number in splittedLine)
+        {
+            int currentNumber = int.Parse(number);
 
-//                if (currentNumber > max)
-//                    max = currentNumber;
-//                if (currentNumber < min)
-//                    min = currentNumber;
-//            }
-//            Console.WriteLine(string.Format(max, min));
-//        }
-//        [TestMethod]
-//        public void TestMethod1()
-//        {
-//            Assert.AreEqual("42 -9", HighAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
-//        }
-//    }
-//}
+            if (currentNumber > max)
+                max = currentNumber;
+            if (currentNumber < min)
+                min = currentNumber;
+        }
+        return (max, min));
+    }
+
+    [TestMethod]
+    public void TestMethod1()
+    {
+        Assert.AreEqual("42 -9", HighAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+    }
+}
