@@ -11,11 +11,59 @@ namespace TestKata
     [TestClass]
     public class UnitTest4
     {
-        //Instructions:
+        ////Instructions:
 
         //Write a program to determine if a string contains all unique characters.Return true if it does and false otherwise.
-
         //The string may contain any of the 128 ASCII characters.
+
+
+        ////Super simple1:
+        //public static bool HasUniqueChars(string str)
+        //{
+        //    return str.Distinct().SequenceEqual(str);
+        //}
+
+        ////Super simple 2:
+        //public static bool HasUniqueChars(string str)
+        //{
+        //    return str.ToArray().Distinct().Count() == str.Length;
+        //}
+
+        //// linq solution 1:
+
+        //public static bool HasUniqueChars(string str)
+        //{
+        //    return str.All(n => str.Count(m => m == n) == 1);
+        //}
+
+        //// Linq Solution 2:
+        //public static bool HasUniqueChars(string str)
+        //{
+        //    var chars = (str.GroupBy(n => n)
+        //              .Select(n => n.Count())).Count();
+
+        //    return (chars == str.Length);
+        //}
+
+        //// Linq Solution 3:
+        //public static bool HasUniqueChars(string str) => string.Concat(str.Distinct()) == str;
+
+        ////Linq solution 4:
+        //public static bool HasUniqueChars(string str)
+        //{
+        //    var grouped = str.GroupBy(n => n).Select(l => new { Value = l.Key, Count = l.Count() }).ToList();
+
+        //    foreach (var letter in grouped)
+        //    {
+        //        if (letter.Count > 1)
+        //        {
+        //            return false;
+        //        }
+        //    }
+
+        //    return true;
+        //}
+
 
         public static bool HasUniqueChars(string str)
         {
