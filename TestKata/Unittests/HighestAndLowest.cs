@@ -82,5 +82,11 @@ namespace TestKata
         {
             Assert.AreEqual("42 -9", HighAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            Assert.AreEqual("2018 -2018", HighAndLow("10 8 19 21 -23 -56 2018 -2018 50 110 24 1994"));
+        }
     }
 }
