@@ -13,6 +13,13 @@ namespace TestKata
     [TestClass]
     public class TwiceAsOld
     {
+        // Javascrit solution:
+        // function twiseAsOld(dadYearsOld, sonYearsOld) {
+        //      return Math.abs((2 * sonYearsOld) - dadYearsOld);
+        // }
+        
+        // const twiceAsOld = (d, s) => Math.abs(d - 2 * s);
+
         ////linq solution:
         //public static int TwiceAsOld(int dadYears, int sonYears) => Math.Abs(dadYears - (sonYears * 2));
 
