@@ -15,43 +15,49 @@ namespace TestKata.Unittests
     {
         public static int CountSquares(int n)
         {
-            // Selution 1:
-            //int x = n + 1;
-            //int y = n + 1;
-            //int z = n + 1;
-            //int cubes1 = 0;
-            //int cubes2 = 0;
-            //int cubes3 = 0;
-            //int cubestotal = 1;
-            //if (n > 1)
-            //{
-            //    cubes1 = 2 * x * y;
-            //    z = z - 2;
-            //    cubestotal = cubes1;
-            //    if (z > 1)
-            //    {
-            //        cubes2 = 2 * y * z;
-            //        y = y - 2;
-            //        cubestotal = cubes1 + cubes2;
-            //    }
-            //    if (y > 1)
-            //    {
-            //        cubes3 = 2 * y * z;
-            //        cubestotal = cubes1 + cubes2 + cubes3;
-            //    }
-            //    else
-            //    {
-            //        cuts = cubestotal;
-            //        return cubestotal;
-            //    }
-            //}
-            //return cubestotal;
+            //Selution 1:
+            int x = n + 1;
+            int y = n + 1;
+            int z = n + 1;
+            int cubes1 = 0;
+            int cubes2 = 0;
+            int cubes3 = 0;
+            int cubestotal = 1;
+            if (n > 1)
+            {
+                cubes1 = 2 * x * y;
+                z = z - 2;
+                cubestotal = cubes1;
+                if (z > 1)
+                {
+                    cubes2 = 2 * y * z;
+                    y = y - 2;
+                    cubestotal = cubes1 + cubes2;
+                }
+                if (y > 1)
+                {
+                    cubes3 = 2 * y * z;
+                    cubestotal = cubes1 + cubes2 + cubes3;
+                }
+                else
+                {
+                    n = cubestotal;
+                    return cubestotal;
+                }
+            }
+            return cubestotal;
+        }
 
-            //Selution 2:
-            //return n == 0 ? 1 : 6 * n * n + 2;
+        //Solution 2:
+        public static int CountSquares2(int n2)
+        {
+            return n2 < 1 ? 1 : (int)(Math.Pow(++n2, 3) - Math.Pow(n2 - 2, 3));
+        }
 
-            //Selution 3:
-            return n < 1 ? 1 : (int)(Math.Pow(++n, 3) - Math.Pow(n - 2, 3));
+        //Solution 3:
+        public static int CountSquares3(int n3)
+        {
+            return n3 == 0 ? 1 : 6 * n3 * n3 + 2;
         }
 
         [TestMethod]
@@ -63,19 +69,37 @@ namespace TestKata.Unittests
         [TestMethod]
         public void TestMethod2()
         {
-            Assert.AreEqual(152, CountSurfaceCubes.CountSquares(5));
+            Assert.AreEqual(152, CountSurfaceCubes.CountSquares2(5));
         }
 
         [TestMethod]
         public void TestMethod3()
         {
-            Assert.AreEqual(1538, CountSurfaceCubes.CountSquares(16));
+            Assert.AreEqual(1538, CountSurfaceCubes.CountSquares3(16));
         }
 
         [TestMethod]
         public void TestMethod4()
         {
             Assert.AreEqual(3176, CountSurfaceCubes.CountSquares(23));
+        }
+
+        [TestMethod]
+        public void TestMethod5()
+        {
+            Assert.AreEqual(56, CountSurfaceCubes.CountSquares(3));
+        }
+
+        [TestMethod]
+        public void TestMethod6()
+        {
+            Assert.AreEqual(60002, CountSurfaceCubes.CountSquares(100));
+        }
+
+        [TestMethod]
+        public void TestMethod7()
+        {
+            Assert.AreEqual(15002, CountSurfaceCubes.CountSquares(50));
         }
     }
 }
