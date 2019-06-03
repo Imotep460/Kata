@@ -36,7 +36,7 @@ namespace TestKata.Unittests
                 }
                 if (y > 1)
                 {
-                    cubesSides = 2 * y * z;
+                    cubesTopAndBottom = 2 * y * z;
                     cubestotal = cubesFrontAndBack + cubesSides + cubesTopAndBottom;
                 }
                 else
