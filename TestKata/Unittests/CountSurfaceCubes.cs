@@ -13,7 +13,7 @@ namespace TestKata.Unittests
     [TestClass]
     public class CountSurfaceCubes
     {
-        public static int CountSquares(int n)
+        public static int CountSquares0(int n)
         {
             //Selution 1:
             int x = n + 1;
@@ -49,13 +49,13 @@ namespace TestKata.Unittests
         }
 
         //Solution 2:
-        public static int CountSquares2(int n2)
+        public static int CountSquares1(int n2)
         {
             return n2 < 1 ? 1 : (int)(Math.Pow(++n2, 3) - Math.Pow(n2 - 2, 3));
         }
 
         //Solution 3:
-        public static int CountSquares3(int n3)
+        public static int CountSquares2(int n3)
         {
             return n3 == 0 ? 1 : 6 * n3 * n3 + 2;
         }
@@ -63,43 +63,57 @@ namespace TestKata.Unittests
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.AreEqual(1, CountSurfaceCubes.CountSquares(0));
+            Assert.AreEqual(1, CountSquares0(0));
+            Assert.AreEqual(1, CountSquares1(0));
+            Assert.AreEqual(1, CountSquares2(0));
         }
 
         [TestMethod]
         public void TestMethod2()
         {
-            Assert.AreEqual(152, CountSurfaceCubes.CountSquares2(5));
+            Assert.AreEqual(152, CountSquares0(5));
+            Assert.AreEqual(152, CountSquares1(5));
+            Assert.AreEqual(152, CountSquares2(5));
         }
 
         [TestMethod]
         public void TestMethod3()
         {
-            Assert.AreEqual(1538, CountSurfaceCubes.CountSquares3(16));
+            Assert.AreEqual(1538, CountSquares0(16));
+            Assert.AreEqual(1538, CountSquares1(16));
+            Assert.AreEqual(1538, CountSquares2(16));
         }
 
         [TestMethod]
         public void TestMethod4()
         {
-            Assert.AreEqual(3176, CountSurfaceCubes.CountSquares(23));
+            Assert.AreEqual(3176, CountSquares0(23));
+            Assert.AreEqual(3176, CountSquares1(23));
+            Assert.AreEqual(3176, CountSquares2(23));
         }
 
         [TestMethod]
         public void TestMethod5()
         {
-            Assert.AreEqual(56, CountSurfaceCubes.CountSquares(3));
+            Assert.AreEqual(56, CountSquares0(3));
+            Assert.AreEqual(56, CountSquares1(3));
+            Assert.AreEqual(56, CountSquares2(3));
         }
 
         [TestMethod]
         public void TestMethod6()
         {
-            Assert.AreEqual(60002, CountSurfaceCubes.CountSquares(100));
+            Assert.AreEqual(60002, CountSquares0(100));
+            Assert.AreEqual(60002, CountSquares1(100));
+            Assert.AreEqual(60002, CountSquares2(100));
         }
 
         [TestMethod]
         public void TestMethod7()
         {
-            Assert.AreEqual(15002, CountSurfaceCubes.CountSquares(50));
+            Assert.AreEqual(15002, CountSquares0(50));
+            Assert.AreEqual(15002, CountSquares1(50));
+            Assert.AreEqual(15002, CountSquares2(50));
         }
     }
 }
