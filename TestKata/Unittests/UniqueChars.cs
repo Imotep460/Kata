@@ -82,60 +82,61 @@ namespace TestKata
         public void TestMethod1()
         {
             Assert.IsTrue(HasUniqueChars0("abcdef"));
+            Assert.IsTrue(HasUniqueChars1("abcdef"));
+            Assert.IsTrue(HasUniqueChars2("abcdef"));
+            Assert.IsTrue(HasUniqueChars3("abcdef"));
+            Assert.IsTrue(HasUniqueChars4("abcdef"));
+            Assert.IsTrue(HasUniqueChars5("abcdef"));
+            Assert.IsTrue(HasUniqueChars6("abcdef"));
         }
 
         [TestMethod]
         public void TestMethod2()
         {
+            Assert.IsFalse(HasUniqueChars0("++-"));
             Assert.IsFalse(HasUniqueChars1("++-"));
+            Assert.IsFalse(HasUniqueChars2("++-"));
+            Assert.IsFalse(HasUniqueChars3("++-"));
+            Assert.IsFalse(HasUniqueChars4("++-"));
+            Assert.IsFalse(HasUniqueChars5("++-"));
+            Assert.IsFalse(HasUniqueChars6("++-"));
         }
 
         [TestMethod]
         public void TestMethod3()
         {
+            Assert.IsFalse(HasUniqueChars0("  nAa"));
+            Assert.IsFalse(HasUniqueChars1("  nAa"));
             Assert.IsFalse(HasUniqueChars2("  nAa"));
+            Assert.IsFalse(HasUniqueChars3("  nAa"));
+            Assert.IsFalse(HasUniqueChars4("  nAa"));
+            Assert.IsFalse(HasUniqueChars5("  nAa"));
+            Assert.IsFalse(HasUniqueChars6("  nAa"));
         }
 
         [TestMethod]
         public void TestMethod4()
         {
+            Assert.IsFalse(HasUniqueChars0("aba"));
+            Assert.IsFalse(HasUniqueChars1("aba"));
+            Assert.IsFalse(HasUniqueChars2("aba"));
             Assert.IsFalse(HasUniqueChars3("aba"));
+            Assert.IsFalse(HasUniqueChars4("aba"));
+            Assert.IsFalse(HasUniqueChars5("aba"));
+            Assert.IsFalse(HasUniqueChars6("aba"));
+
         }
 
         [TestMethod]
         public void TestMethod5()
         {
-            Assert.IsTrue(HasUniqueChars4("Is True"));
-        }
-
-        [TestMethod]
-        public void TestMethod6()
-        {
-            Assert.IsTrue(HasUniqueChars5("abcdef"));
-        }
-
-        [TestMethod]
-        public void TestMethod7()
-        {
-            Assert.IsFalse(HasUniqueChars6("++-"));
-        }
-
-        [TestMethod]
-        public void TestMethod8()
-        {
-            Assert.IsFalse(HasUniqueChars0("  nAa"));
-        }
-
-        [TestMethod]
-        public void TestMethod9()
-        {
-            Assert.IsFalse(HasUniqueChars1("aba"));
-        }
-
-        [TestMethod]
-        public void TestMethod10()
-        {
+            Assert.IsTrue(HasUniqueChars0("Is True"));
+            Assert.IsTrue(HasUniqueChars1("Is True"));
             Assert.IsTrue(HasUniqueChars2("Is True"));
+            Assert.IsTrue(HasUniqueChars3("Is True"));
+            Assert.IsTrue(HasUniqueChars4("Is True"));
+            Assert.IsTrue(HasUniqueChars5("Is True"));
+            Assert.IsTrue(HasUniqueChars6("Is True"));
         }
     }
 }
