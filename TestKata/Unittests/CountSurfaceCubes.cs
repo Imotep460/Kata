@@ -19,25 +19,25 @@ namespace TestKata.Unittests
             int x = n + 1;
             int y = n + 1;
             int z = n + 1;
-            int cubes1 = 0;
-            int cubes2 = 0;
-            int cubes3 = 0;
+            int cubesFrontAndBack = 0;
+            int cubesSides = 0;
+            int cubesTopAndBottom = 0;
             int cubestotal = 1;
             if (n > 1)
             {
-                cubes1 = 2 * x * y;
+                cubesFrontAndBack = 2 * x * y;
                 z = z - 2;
-                cubestotal = cubes1;
+                cubestotal = cubesFrontAndBack;
                 if (z > 1)
                 {
-                    cubes2 = 2 * y * z;
+                    cubesSides = 2 * y * z;
                     y = y - 2;
-                    cubestotal = cubes1 + cubes2;
+                    cubestotal = cubesFrontAndBack + cubesSides;
                 }
                 if (y > 1)
                 {
-                    cubes3 = 2 * y * z;
-                    cubestotal = cubes1 + cubes2 + cubes3;
+                    cubesSides = 2 * y * z;
+                    cubestotal = cubesFrontAndBack + cubesSides + cubesTopAndBottom;
                 }
                 else
                 {
