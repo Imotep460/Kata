@@ -23,20 +23,20 @@ namespace TestKata
     public class HighestAndLowest
     {
         //// linq solution:
-        public static string HighAndLow(string numbers)
+        public static string HighAndLow0(string numbers)
         {
             var numbersList = numbers.Split(' ').Select(x => Convert.ToInt32(x));
             return string.Format("{0} {1}", numbersList.Max(), numbersList.Min());
         }
 
-        public static string HighAndLow2(string numbers)
+        public static string HighAndLow1(string numbers)
         {
             var parsed = numbers.Split().Select(int.Parse);
             return parsed.Max() + " " + parsed.Min();
         }
 
         // Weird solution:
-        public static string HighAndLow3(string numbers)
+        public static string HighAndLow2(string numbers)
         {
             string[] splittedLine = numbers.Split(' ');
 
@@ -83,25 +83,17 @@ namespace TestKata
         [TestMethod]
         public void TestMethod0()
         {
-            Assert.AreEqual("42 -9", HighAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+            Assert.AreEqual("42 -9", HighAndLow0("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+            Assert.AreEqual("42 -9", HighAndLow1("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+            Assert.AreEqual("42 -9", HighAndLow2("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
         }
 
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.AreEqual("2018 -2018", HighAndLow("10 8 19 21 -23 -56 2018 -2018 50 110 24 1994"));
-        }
-
-        [TestMethod]
-        public void TestMethod2()
-        {
+            Assert.AreEqual("2018 -2018", HighAndLow0("10 8 19 21 -23 -56 2018 -2018 50 110 24 1994"));
+            Assert.AreEqual("2018 -2018", HighAndLow1("10 8 19 21 -23 -56 2018 -2018 50 110 24 1994"));
             Assert.AreEqual("2018 -2018", HighAndLow2("10 8 19 21 -23 -56 2018 -2018 50 110 24 1994"));
-        }
-
-        [TestMethod]
-        public void TestMethod3()
-        {
-            Assert.AreEqual("2018 -2018", HighAndLow3("10 8 19 21 -23 -56 2018 -2018 50 110 24 1994"));
         }
     }
 }
