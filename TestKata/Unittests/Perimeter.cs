@@ -31,13 +31,13 @@ namespace TestKata.Unittests
         [TestMethod]
         public void Test1()
         {
-            Assert.AreEqual(new BigInteger(80), Perimeter.perimeter(new BigInteger(5)));
+            Assert.AreEqual(new BigInteger(80), perimeter(new BigInteger(5)));
         }
 
         [TestMethod]
         public void Test2()
         {
-            Assert.AreEqual(new BigInteger(216), Perimeter.perimeter(new BigInteger(7)));
+            Assert.AreEqual(new BigInteger(216), perimeter(new BigInteger(7)));
         }
     }
 }
