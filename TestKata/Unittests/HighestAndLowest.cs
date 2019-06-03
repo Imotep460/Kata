@@ -28,65 +28,80 @@ namespace TestKata
             var numbersList = numbers.Split(' ').Select(x => Convert.ToInt32(x));
             return string.Format("{0} {1}", numbersList.Max(), numbersList.Min());
         }
-        ////public static string HighAndLow(string numbers)
-        ////{
-        ////    var parsed = numbers.Split().Select(int.Parse);
-        ////    return parsed.Max() + " " + parsed.Min();
-        ////}
-        //public static string HighAndLow(string numbers)
-        //{
-        //    string[] splittedLine = numbers.Split(' ');
 
-        //    double highest = 0;
-        //    double lowest = 0;
+        public static string HighAndLow2(string numbers)
+        {
+            var parsed = numbers.Split().Select(int.Parse);
+            return parsed.Max() + " " + parsed.Min();
+        }
 
-        //    int amount = splittedLine.Length;
+        // Weird solution:
+        public static string HighAndLow3(string numbers)
+        {
+            string[] splittedLine = numbers.Split(' ');
 
-        //    double[] converter = new double[amount];
+            double highest = 0;
+            double lowest = 0;
 
-        //    highest = converter[0];
-        //    lowest = converter[0];
+            int amount = splittedLine.Length;
 
-        //    for (int i = 0; i < splittedLine.Length; i++)
-        //    {
+            double[] converter = new double[amount];
 
-        //        converter[i] = Convert.ToDouble(splittedLine[i]);
-        //    }
-        //    for (int i = 0; i < converter.Length; i++)
-        //    {
-        //        if (converter[i] > highest)
-        //        {
-        //            highest = converter[i];
+            highest = converter[0];
+            lowest = converter[0];
 
-        //            if (converter[i] < lowest)
-        //            {
-        //                lowest = converter[i];
-        //            }
-        //        }
-        //        if (converter[i] < lowest)
-        //        {
-        //            lowest = converter[i];
+            for (int i = 0; i < splittedLine.Length; i++)
+            {
 
-        //            if (converter[i] > highest)
-        //            {
-        //                highest = converter[i];
-        //            }
-        //        }
-        //    }
-        //    string result = highest.ToString() + " " + lowest.ToString();
-        //    return result;
-        //}
+                converter[i] = Convert.ToDouble(splittedLine[i]);
+            }
+            for (int i = 0; i < converter.Length; i++)
+            {
+                if (converter[i] > highest)
+                {
+                    highest = converter[i];
+
+                    if (converter[i] < lowest)
+                    {
+                        lowest = converter[i];
+                    }
+                }
+                if (converter[i] < lowest)
+                {
+                    lowest = converter[i];
+
+                    if (converter[i] > highest)
+                    {
+                        highest = converter[i];
+                    }
+                }
+            }
+            string result = highest.ToString() + " " + lowest.ToString();
+            return result;
+        }
 
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethod0()
         {
             Assert.AreEqual("42 -9", HighAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void TestMethod1()
         {
             Assert.AreEqual("2018 -2018", HighAndLow("10 8 19 21 -23 -56 2018 -2018 50 110 24 1994"));
+        }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            Assert.AreEqual("2018 -2018", HighAndLow2("10 8 19 21 -23 -56 2018 -2018 50 110 24 1994"));
+        }
+
+        [TestMethod]
+        public void TestMethod3()
+        {
+            Assert.AreEqual("2018 -2018", HighAndLow3("10 8 19 21 -23 -56 2018 -2018 50 110 24 1994"));
         }
     }
 }
