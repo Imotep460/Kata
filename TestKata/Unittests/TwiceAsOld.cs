@@ -17,14 +17,14 @@ namespace TestKata
         // function twiseAsOld(dadYearsOld, sonYearsOld) {
         //      return Math.abs((2 * sonYearsOld) - dadYearsOld);
         // }
-        
+
         // const twiceAsOld = (d, s) => Math.abs(d - 2 * s);
 
-        ////linq solution:
-        //public static int TwiceAsOld(int dadYears, int sonYears) => Math.Abs(dadYears - (sonYears * 2));
+        //linq solution:
+        public static int twiceAsOld0(int dadYears, int sonYears) => Math.Abs(dadYears - (sonYears * 2));
 
         static int diff = 0;
-        public static int twiceAsOld(int dadYears, int sonYears)
+        public static int twiceAsOld1(int dadYears, int sonYears)
         {
             diff = 0;
             diff = ((sonYears * 2) - dadYears);
@@ -41,14 +41,18 @@ namespace TestKata
         [TestMethod]
         public void Test1()
         {
-            Assert.AreEqual(30, twiceAsOld(30, 0));
-            Assert.AreEqual(16, twiceAsOld(30, 7));
-            Assert.AreEqual(15, twiceAsOld(45, 30));
+            Assert.AreEqual(30, twiceAsOld0(30, 0));
+            Assert.AreEqual(16, twiceAsOld0(30, 7));
+            Assert.AreEqual(15, twiceAsOld0(45, 30));
+            Assert.AreEqual(30, twiceAsOld1(30, 0));
+            Assert.AreEqual(16, twiceAsOld1(30, 7));
+            Assert.AreEqual(15, twiceAsOld1(45, 30));
         }
         [TestMethod]
         public void Test2()
         {
-            Assert.AreEqual(30, twiceAsOld(30, 0));
+            Assert.AreEqual(30, twiceAsOld0(30, 0));
+            Assert.AreEqual(30, twiceAsOld1(30, 0));
         }
     }        
 }
