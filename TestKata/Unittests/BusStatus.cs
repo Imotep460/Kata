@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-// Kata description
+//// Kata description:
 //Number of people in the bus
 //There is a bus moving in the city, and it takes and drop some people in each bus stop.
 
@@ -20,7 +20,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestKata
 {
-
     [TestClass]
     public class BusStatus
     {
@@ -60,9 +59,7 @@ namespace TestKata
             };
             Assert.AreEqual(5, Number0(peopleList));
             Assert.AreEqual(5, Number1(peopleList));
-        }
-
-        
+        }        
 
         [TestMethod]
         public void SecondTest()
@@ -79,6 +76,7 @@ namespace TestKata
             Assert.AreEqual(17, Number0(peopleList));
             Assert.AreEqual(17, Number1(peopleList));
         }
+
         [TestMethod]
         public void ThridTest()
         {
