@@ -25,7 +25,7 @@ namespace TestKata.Unittests
         {
             string vowels = "aeiouyAEIOUY";
 
-            foreach (var vowel in vowels)
+            foreach (char vowel in vowels)
             {
                 s = s.Replace(vowel, '!');
             }
@@ -36,20 +36,8 @@ namespace TestKata.Unittests
         public void TestMethod()
         {
             Assert.AreEqual("H!!", ReplaceVowel1("Hi!"));
-        }
-        [TestMethod]
-        public void TestMehotd1()
-        {
             Assert.AreEqual("!H!! H!!", ReplaceVowel1("!Hi! Hi!"));
-        }
-        [TestMethod]
-        public void TestMehotd2()
-        {
             Assert.AreEqual("!!!!!", ReplaceVowel1("aeiou"));
-        }
-        [TestMethod]
-        public void TestMehotd3()
-        {
             Assert.AreEqual("!BCD!", ReplaceVowel1("ABCDE"));
         }
 
@@ -57,41 +45,17 @@ namespace TestKata.Unittests
         public void TestMethod4()
         {
             Assert.AreEqual("H!!", ReplaceVowel2("Hi!"));
-        }
-        [TestMethod]
-        public void TestMehotd5()
-        {
             Assert.AreEqual("!H!! H!!", ReplaceVowel2("!Hi! Hi!"));
-        }
-        [TestMethod]
-        public void TestMehotd6()
-        {
+            Assert.AreEqual("!BCD!", ReplaceVowel2("ABCDE"));            
             Assert.AreEqual("!!!!!", ReplaceVowel2("aeiou"));
-        }
-        [TestMethod]
-        public void TestMehotd7()
-        {
-            Assert.AreEqual("!BCD!", ReplaceVowel2("ABCDE"));
         }
 
         [TestMethod]
         public void TestMethod8()
         {
             Assert.AreEqual("H!!", Replace("Hi!"));
-        }
-        [TestMethod]
-        public void TestMehotd9()
-        {
             Assert.AreEqual("!H!! H!!", Replace("!Hi! Hi!"));
-        }
-        [TestMethod]
-        public void TestMehotd10()
-        {
             Assert.AreEqual("!!!!!", Replace("aeiou"));
-        }
-        [TestMethod]
-        public void TestMehotd11()
-        {
             Assert.AreEqual("!BCD!", Replace("ABCDE"));
         }
     }
