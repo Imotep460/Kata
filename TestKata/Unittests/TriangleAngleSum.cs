@@ -5,15 +5,24 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestKata.Unittests
 {
-    /// <summary>
-    /// You are given 2 angles of a triangle, it's your job to find the third.
-    /// </summary>
+
+    // You are given 2 angles of a triangle, it's your job to find the third.
+
     [TestClass]
     public class TriangleAngleSum
     {
         public int TriangleAngleSum0(int a, int b)
         {
-            return 180 - (a + b);
+            if(IsValidTriangle(a, b))
+            {
+                return 180 - (a + b);
+            }
+            return -1;
+        }
+
+        public bool IsValidTriangle(int angleA, int angleB)
+        {
+            return (angleA + angleB) < 180;
         }
 
         [TestMethod]
@@ -35,6 +44,11 @@ namespace TestKata.Unittests
         public void TestMethod3()
         {
             Assert.AreEqual(150, TriangleAngleSum0(10, 20));
+        }
+        [TestMethod]
+        public void TestMethod4()
+        {
+            Assert.AreEqual(-1, TriangleAngleSum0(90, 100));
         }
     }
 }
