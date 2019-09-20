@@ -18,7 +18,7 @@ namespace TestKata.Unittests
 
         public string ReplaceVowel1(string s)
         {
-            return Regex.Replace(s, "[aeiouyAEIOUY]", "!");
+            return Regex.Replace(s, "[aeiouyAEIOUY]", "!", RegexOptions.IgnoreCase);
         }
 
         public string ReplaceVowel2(string s)
