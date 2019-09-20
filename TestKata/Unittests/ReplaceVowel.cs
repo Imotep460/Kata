@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 namespace TestKata.Unittests
 {
     // Replace all vowels in a string with exclamation marks (!).
-    // aeiouAEIOU is a vowel.
+    // aeiouyAEIOUY is a vowel.
     [TestClass]
     public class ReplaceVowel
     {
