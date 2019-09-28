@@ -54,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unittests\CountSurfaceCubes.cs" />
     <Compile Include="Unittests\Perimeter.cs" />
+    <Compile Include="Unittests\Recursion.cs" />
     <Compile Include="Unittests\RegexPin.cs" />
     <Compile Include="Unittests\ReplaceVowel.cs" />
     <Compile Include="Unittests\Summation.cs" />
