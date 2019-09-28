@@ -139,11 +139,59 @@ namespace TestKata.Unittests
         }
         // Done! :-)
 
+        public long SumOfOddNum2(long n)
+        {
+            // counting all previous numbers from rows n-1, n-2, ... 1
+            long quantity = (n * (1 + n)) / 2 - n;
+
+            // calculating next odd number which aligns to the row number 'n'
+            long next_value = quantity * 2 % 2 == 0 ? quantity * 2 + 1 : quantity * 2 + 2;
+
+            // 'n' - is row`s number and quantity of its numbers 
+            // Example:
+            //   n=4 - 4th row and 4 numbers (13, 15, 17, 19) 
+            //
+            // Making arithmetic progression with step +2
+            //
+            //   S = n * (2*a1 + (n-1)*d)
+            //
+            // d  - step (our case is 2)
+            // a1 - first number
+            // n  - amount of numbers in a row 
+            return n * (2 * next_value + (n - 1) * 2) / 2;
+        }
+
+        public long SumOfOddNum3(long n)
+        {
+            return (long)Math.Pow(n, 3);
+        }
+
+        // Linq solution:
+        public long SumOfOddNum4(long n) => (long)Math.Pow(n, 3);
+
         [TestMethod]
         public void TestMethod1()
         {
             Assert.AreEqual(1, SumOfOddNum1(1));
             Assert.AreEqual(74088, SumOfOddNum1(42));
+        }
+        [TestMethod]
+        public void TestMethod2()
+        {
+            Assert.AreEqual(1, SumOfOddNum2(1));
+            Assert.AreEqual(74088, SumOfOddNum2(42));
+        }
+        [TestMethod]
+        public void TestMethod3()
+        {
+            Assert.AreEqual(1, SumOfOddNum3(1));
+            Assert.AreEqual(74088, SumOfOddNum3(42));
+        }
+        [TestMethod]
+        public void TestMethod4()
+        {
+            Assert.AreEqual(1, SumOfOddNum4(1));
+            Assert.AreEqual(74088, SumOfOddNum4(42));
         }
     }
 }
