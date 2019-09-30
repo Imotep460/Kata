@@ -57,6 +57,7 @@
     <Compile Include="Unittests\IntRoll.cs" />
     <Compile Include="Unittests\PerfectSquare.cs" />
     <Compile Include="Unittests\Perimeter.cs" />
+    <Compile Include="Unittests\PopulationGrowth.cs" />
     <Compile Include="Unittests\Recursion.cs" />
     <Compile Include="Unittests\RecursiveFibbonacci.cs" />
     <Compile Include="Unittests\RegexPin.cs" />
