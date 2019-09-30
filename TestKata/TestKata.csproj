@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Unittests\BusStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unittests\CenturyFromYear.cs" />
     <Compile Include="Unittests\CountSheep.cs" />
     <Compile Include="Unittests\CountSurfaceCubes.cs" />
     <Compile Include="Unittests\IntRoll.cs" />
