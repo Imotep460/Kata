@@ -24,10 +24,22 @@ namespace TestKata.Unittests
         // My solution
         public char MissingLetter1(char[] array)
         {
+            char letter;
             Func<char[], char> f =
-                s => { for (int i = 0; s[++i] == ++s[0];) {; } return s[0]; };
-            char letter = f(array);
+                s =>
+                {
+                    for (int i = 0; s[++i] == ++s[0];)
+                    {
+                        ;
+                    }
+                    return s[0];
+                };
+            letter = f(array);
             return letter;
+            //// One liner;
+            //Func<char[], char> f =
+            //    s => { for (int i = 0; s[++i] == ++s[0];) {; } return s[0]; };
+            //return letter;
         }
 
         public char MissingLetter2(char [] array)
