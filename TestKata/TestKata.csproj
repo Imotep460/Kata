@@ -57,6 +57,7 @@
     <Compile Include="Unittests\CountSheep.cs" />
     <Compile Include="Unittests\CountSurfaceCubes.cs" />
     <Compile Include="Unittests\IntRoll.cs" />
+    <Compile Include="Unittests\MissingLetter.cs" />
     <Compile Include="Unittests\PerfectSquare.cs" />
     <Compile Include="Unittests\Perimeter.cs" />
     <Compile Include="Unittests\PopulationGrowth.cs" />
