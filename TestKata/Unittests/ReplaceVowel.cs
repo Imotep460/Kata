@@ -12,16 +12,16 @@ namespace TestKata.Unittests
     public class ReplaceVowel
     {
         //Linq solution;
-        public static string Replace(string s)
+        public static string ReplaceVowel1(string s)
             => Regex.Replace(s, "[aeiouyAEIOUY]", "!", RegexOptions.IgnoreCase);
 
 
-        public string ReplaceVowel1(string s)
+        public string ReplaceVowel2(string s)
         {
             return Regex.Replace(s, "[aeiouyAEIOUY]", "!", RegexOptions.IgnoreCase);
         }
 
-        public string ReplaceVowel2(string s)
+        public string ReplaceVowel3(string s)
         {
             string vowels = "aeiouyAEIOUY";
 
@@ -53,10 +53,10 @@ namespace TestKata.Unittests
         [TestMethod]
         public void TestMethod8()
         {
-            Assert.AreEqual("H!!", Replace("Hi!"));
-            Assert.AreEqual("!H!! H!!", Replace("!Hi! Hi!"));
-            Assert.AreEqual("!!!!!", Replace("aeiou"));
-            Assert.AreEqual("!BCD!", Replace("ABCDE"));
+            Assert.AreEqual("H!!", ReplaceVowel3("Hi!"));
+            Assert.AreEqual("!H!! H!!", ReplaceVowel3("!Hi! Hi!"));
+            Assert.AreEqual("!!!!!", ReplaceVowel3("aeiou"));
+            Assert.AreEqual("!BCD!", ReplaceVowel3("ABCDE"));
         }
     }
 }
