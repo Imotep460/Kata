@@ -11,11 +11,10 @@ namespace TestKata.Unittests
     [TestClass]
     public class GetLoopSize
     {
-        public GetLoopSize()
+        public static int GetLoopSize1(LoopDetector.Node startNode)
         {
-            //
-            // TODO: Add constructor logic here
-            //
+            var dict = new Dictionary<LoopDector.Node, int>();
+
         }
 
         [TestMethod]
