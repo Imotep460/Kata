@@ -59,6 +59,7 @@
     <Compile Include="Unittests\GetLoopSize.cs" />
     <Compile Include="Unittests\IntRoll.cs" />
     <Compile Include="Unittests\MissingLetter.cs" />
+    <Compile Include="Unittests\MorseCode.cs" />
     <Compile Include="Unittests\PerfectSquare.cs" />
     <Compile Include="Unittests\Perimeter.cs" />
     <Compile Include="Unittests\PopulationGrowth.cs" />
