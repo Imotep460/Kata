@@ -76,6 +76,7 @@
     <Compile Include="Unittests\HighestAndLowest.cs" />
     <Compile Include="Unittests\UniqueChars.cs" />
     <Compile Include="Unittests\VacationCar.cs" />
+    <Compile Include="Unittests\WhichNumber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
