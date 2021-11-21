@@ -52,23 +52,7 @@ namespace TestKata.Unittests
         public void TestMethod0()
         {
             Assert.AreEqual(RentalCarCost(1), 40);
-        }
-
-        /// <summary>
-        /// Rent a car for 3 days.
-        /// </summary>
-        [TestMethod]
-        public void TestMethod1()
-        {
             Assert.AreEqual(RentalCarCost(3), 100);
-        }
-
-        /// <summary>
-        /// Rent a car for 7 days.
-        /// </summary>
-        [TestMethod]
-        public void TestMethod2()
-        {
             Assert.AreEqual(RentalCarCost(7), 230);
         }
 
@@ -79,23 +63,7 @@ namespace TestKata.Unittests
         public void TestMethod3()
         {
             Assert.AreEqual(RentalCarCost2(1), 40);
-        }
-
-        /// <summary>
-        /// Rent a car for 3 days.
-        /// </summary>
-        [TestMethod]
-        public void TestMethod4()
-        {
             Assert.AreEqual(RentalCarCost2(3), 100);
-        }
-
-        /// <summary>
-        /// Rent a car for 7 days.
-        /// </summary>
-        [TestMethod]
-        public void TestMethod5()
-        {
             Assert.AreEqual(RentalCarCost2(7), 230);
         }
 
@@ -106,23 +74,7 @@ namespace TestKata.Unittests
         public void TestMethod6()
         {
             Assert.AreEqual(RentalCarCost3(1), 40);
-        }
-
-        /// <summary>
-        /// Rent a car for 3 days.
-        /// </summary>
-        [TestMethod]
-        public void TestMethod7()
-        {
             Assert.AreEqual(RentalCarCost3(3), 100);
-        }
-
-        /// <summary>
-        /// Rent a car for 7 days.
-        /// </summary>
-        [TestMethod]
-        public void TestMethod8()
-        {
             Assert.AreEqual(RentalCarCost3(7), 230);
         }
     }
