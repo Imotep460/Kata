@@ -50,6 +50,10 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConvertFromSeconds.cs" />
+    <Compile Include="ConvertRomanNumeralsToInt.cs" />
+    <Compile Include="FindUniqueNumber.cs" />
+    <Compile Include="Rot13Encryption.cs" />
     <Compile Include="Unittests\ArraySort.cs" />
     <Compile Include="Unittests\BusStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +82,7 @@
     <Compile Include="Unittests\UniqueChars.cs" />
     <Compile Include="Unittests\VacationCar.cs" />
     <Compile Include="Unittests\WhichNumber.cs" />
+    <Compile Include="ValidatePhoneNumber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
