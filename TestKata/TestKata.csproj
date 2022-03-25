@@ -52,8 +52,11 @@
   <ItemGroup>
     <Compile Include="ConvertFromSeconds.cs" />
     <Compile Include="ConvertRomanNumeralsToInt.cs" />
+    <Compile Include="CreatePhoneNumber.cs" />
     <Compile Include="FindUniqueNumber.cs" />
+    <Compile Include="PascalTriangleCalculator.cs" />
     <Compile Include="Rot13Encryption.cs" />
+    <Compile Include="StripComments.cs" />
     <Compile Include="Unittests\ArraySort.cs" />
     <Compile Include="Unittests\BusStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
