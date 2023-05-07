@@ -58,6 +58,7 @@
     <Compile Include="Rot13Encryption.cs" />
     <Compile Include="StripComments.cs" />
     <Compile Include="Unittests\ArraySort.cs" />
+    <Compile Include="Unittests\BuildASquare.cs" />
     <Compile Include="Unittests\BusStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unittests\CenturyFromYear.cs" />
