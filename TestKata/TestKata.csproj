@@ -88,6 +88,7 @@
     <Compile Include="Unittests\MorseCode.cs" />
     <Compile Include="Unittests\PerfectSquare.cs" />
     <Compile Include="Unittests\Perimeter.cs" />
+    <Compile Include="Unittests\PokerHandValidator.cs" />
     <Compile Include="Unittests\PopulationGrowth.cs" />
     <Compile Include="Unittests\Recursion.cs" />
     <Compile Include="Unittests\RecursiveFibbonacci.cs" />
