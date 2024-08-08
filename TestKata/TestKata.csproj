@@ -80,6 +80,7 @@
     <Compile Include="Unittests\ReplaceVowel.cs" />
     <Compile Include="Unittests\RoundToNearestHalf.cs" />
     <Compile Include="Unittests\SudokuValidator.cs" />
+    <Compile Include="Unittests\SumByFactors.cs" />
     <Compile Include="Unittests\Summation.cs" />
     <Compile Include="Unittests\SumOfMultiples.cs" />
     <Compile Include="Unittests\SumOfOddNum.cs" />
