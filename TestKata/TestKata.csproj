@@ -86,6 +86,7 @@
     <Compile Include="Unittests\IntRoll.cs" />
     <Compile Include="Unittests\MissingLetter.cs" />
     <Compile Include="Unittests\MorseCode.cs" />
+    <Compile Include="Unittests\NextBiggerDigit.cs" />
     <Compile Include="Unittests\NextSmallerDigit.cs" />
     <Compile Include="Unittests\PerfectSquare.cs" />
     <Compile Include="Unittests\Perimeter.cs" />
