@@ -100,6 +100,7 @@
     <Compile Include="Unittests\Summation.cs" />
     <Compile Include="Unittests\SumOfMultiples.cs" />
     <Compile Include="Unittests\SumOfOddNum.cs" />
+    <Compile Include="Unittests\SumOfString.cs" />
     <Compile Include="Unittests\TriangleAngleSum.cs" />
     <Compile Include="Unittests\TwiceAsOld.cs" />
     <Compile Include="Unittests\HighestAndLowest.cs" />
