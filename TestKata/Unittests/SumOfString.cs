@@ -35,11 +35,11 @@ namespace TestKata.Unittests
 
             if (!BigInteger.TryParse(a, out valueA))
             {
-                valueB = 0; // If unable to parse "a" cast it as 0
+                valueA = 0; // If unable to parse "a" cast it as 0
             }
             if (!BigInteger.TryParse(b, out valueB))
             {
-                valueA = 0; // If unable to parse "b" cast it as 0
+                valueB = 0; // If unable to parse "b" cast it as 0
             }
 
             return (valueA + valueB).ToString(); // Add the parsed values together and convert the result back into a string.
