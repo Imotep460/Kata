@@ -95,6 +95,7 @@
     <Compile Include="Unittests\RegexPin.cs" />
     <Compile Include="Unittests\ReplaceVowel.cs" />
     <Compile Include="Unittests\RoundToNearestHalf.cs" />
+    <Compile Include="Unittests\SimplisticTCP.cs" />
     <Compile Include="Unittests\SudokuValidator.cs" />
     <Compile Include="Unittests\SumByFactors.cs" />
     <Compile Include="Unittests\Summation.cs" />
