@@ -118,6 +118,11 @@ namespace TestKata.Unittests
             return -1;
         }
 
+        /// <summary>
+        /// Solution from Codewars
+        /// </summary>
+        /// <param name="number">Number to work with</param>
+        /// <returns>Returns the next number to include all numbers from the input number.</returns>
         public long NextSmallerDigit2(long number)
         {
             if (number > 0 & (number + "").Length == 1) return -1;
