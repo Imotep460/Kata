@@ -34,6 +34,7 @@ namespace TestKata.Unittests
     /// 
     /// Link to Kata: https://www.codewars.com/kata/540d0fdd3b6532e5c3000b5b/csharp
     /// </summary>
+    [TestClass]
     public class BinomialExpansion
     {
         /// <summary>
