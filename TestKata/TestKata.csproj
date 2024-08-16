@@ -74,6 +74,7 @@
     <Compile Include="StripComments.cs" />
     <Compile Include="Unittests\ArraySort.cs" />
     <Compile Include="Unittests\BattleshipValidator.cs" />
+    <Compile Include="Unittests\BinomialExpansion.cs" />
     <Compile Include="Unittests\BuildASquare.cs" />
     <Compile Include="Unittests\BusStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
