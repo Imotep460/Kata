@@ -87,6 +87,7 @@
     <Compile Include="Unittests\Fibonacci.cs" />
     <Compile Include="Unittests\GetLoopSize.cs" />
     <Compile Include="Unittests\IntRoll.cs" />
+    <Compile Include="Unittests\LastDigitOfLargeNum.cs" />
     <Compile Include="Unittests\MissingLetter.cs" />
     <Compile Include="Unittests\MorseCode.cs" />
     <Compile Include="Unittests\NextBiggerDigit.cs" />
