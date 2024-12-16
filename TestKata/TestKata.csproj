@@ -114,6 +114,7 @@
     <Compile Include="Unittests\TwiceAsOld.cs" />
     <Compile Include="Unittests\HighestAndLowest.cs" />
     <Compile Include="Unittests\UniqueChars.cs" />
+    <Compile Include="Unittests\UnknownDigit.cs" />
     <Compile Include="Unittests\VacationCar.cs" />
     <Compile Include="Unittests\WhichNumber.cs" />
     <Compile Include="ValidatePhoneNumber.cs" />
